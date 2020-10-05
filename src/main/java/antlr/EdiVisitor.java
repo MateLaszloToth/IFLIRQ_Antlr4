@@ -1,4 +1,5 @@
-package antlr;// Generated from Edi.g4 by ANTLR 4.8
+// Generated from Edi.g4 by ANTLR 4.8
+package antlr;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -22,11 +23,11 @@ public interface EdiVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitEdiObject(EdiParser.EdiObjectContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link EdiParser#unb}.
+	 * Visit a parse tree produced by {@link EdiParser#interchangeHeader}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitUnb(EdiParser.UnbContext ctx);
+	T visitInterchangeHeader(EdiParser.InterchangeHeaderContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link EdiParser#syntax}.
 	 * @param ctx the parse tree
@@ -94,11 +95,11 @@ public interface EdiVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCode(EdiParser.CodeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link EdiParser#unh}.
+	 * Visit a parse tree produced by {@link EdiParser#messageHeader}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitUnh(EdiParser.UnhContext ctx);
+	T visitMessageHeader(EdiParser.MessageHeaderContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link EdiParser#messageReference}.
 	 * @param ctx the parse tree
@@ -130,11 +131,11 @@ public interface EdiVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitControllingAgency(EdiParser.ControllingAgencyContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link EdiParser#org}.
+	 * Visit a parse tree produced by {@link EdiParser#requestOriginator}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOrg(EdiParser.OrgContext ctx);
+	T visitRequestOriginator(EdiParser.RequestOriginatorContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link EdiParser#deliverySystemParty}.
 	 * @param ctx the parse tree
@@ -178,11 +179,11 @@ public interface EdiVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitAccessAuthorization(EdiParser.AccessAuthorizationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link EdiParser#fdq}.
+	 * Visit a parse tree produced by {@link EdiParser#flightDetails}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFdq(EdiParser.FdqContext ctx);
+	T visitFlightDetails(EdiParser.FlightDetailsContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link EdiParser#airline}.
 	 * @param ctx the parse tree
@@ -202,11 +203,11 @@ public interface EdiVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDeparture(EdiParser.DepartureContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link EdiParser#stx}.
+	 * Visit a parse tree produced by {@link EdiParser#segmentStatus}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitStx(EdiParser.StxContext ctx);
+	T visitSegmentStatus(EdiParser.SegmentStatusContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link EdiParser#grabTheLockFlag}.
 	 * @param ctx the parse tree
@@ -226,11 +227,11 @@ public interface EdiVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitValue(EdiParser.ValueContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link EdiParser#unt}.
+	 * Visit a parse tree produced by {@link EdiParser#messageTrailer}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitUnt(EdiParser.UntContext ctx);
+	T visitMessageTrailer(EdiParser.MessageTrailerContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link EdiParser#messageControl}.
 	 * @param ctx the parse tree
@@ -238,11 +239,11 @@ public interface EdiVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitMessageControl(EdiParser.MessageControlContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link EdiParser#unz}.
+	 * Visit a parse tree produced by {@link EdiParser#interchangeTrailer}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitUnz(EdiParser.UnzContext ctx);
+	T visitInterchangeTrailer(EdiParser.InterchangeTrailerContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link EdiParser#interchangeControl}.
 	 * @param ctx the parse tree

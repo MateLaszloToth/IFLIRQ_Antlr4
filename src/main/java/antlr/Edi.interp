@@ -31,7 +31,7 @@ SEPARATOR_SKIP
 rule names:
 edi
 ediObject
-unb
+interchangeHeader
 syntax
 id
 sender
@@ -43,13 +43,13 @@ versionNumber
 date
 time
 code
-unh
+messageHeader
 messageReference
 messageType
 name
 releaseNumber
 controllingAgency
-org
+requestOriginator
 deliverySystemParty
 agent
 locationDetails
@@ -57,17 +57,17 @@ countryCode
 currencyCode
 languageCode
 accessAuthorization
-fdq
+flightDetails
 airline
 flight
 departure
-stx
+segmentStatus
 grabTheLockFlag
 statusIndicator
 value
-unt
+messageTrailer
 messageControl
-unz
+interchangeTrailer
 interchangeControl
 
 

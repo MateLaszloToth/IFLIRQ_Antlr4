@@ -1,4 +1,5 @@
-package antlr;// Generated from Edi.g4 by ANTLR 4.8
+// Generated from Edi.g4 by ANTLR 4.8
+package antlr;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -16,7 +17,8 @@ public class EdiBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements Ed
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEdi(EdiParser.EdiContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEdi(EdiParser.EdiContext ctx) {
+		return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -30,7 +32,7 @@ public class EdiBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements Ed
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitUnb(EdiParser.UnbContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInterchangeHeader(EdiParser.InterchangeHeaderContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -114,7 +116,7 @@ public class EdiBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements Ed
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitUnh(EdiParser.UnhContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMessageHeader(EdiParser.MessageHeaderContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -156,7 +158,7 @@ public class EdiBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements Ed
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitOrg(EdiParser.OrgContext ctx) { return visitChildren(ctx); }
+	@Override public T visitRequestOriginator(EdiParser.RequestOriginatorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -212,7 +214,7 @@ public class EdiBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements Ed
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFdq(EdiParser.FdqContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFlightDetails(EdiParser.FlightDetailsContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -240,7 +242,7 @@ public class EdiBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements Ed
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStx(EdiParser.StxContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSegmentStatus(EdiParser.SegmentStatusContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -268,7 +270,7 @@ public class EdiBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements Ed
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitUnt(EdiParser.UntContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMessageTrailer(EdiParser.MessageTrailerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -282,7 +284,7 @@ public class EdiBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements Ed
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitUnz(EdiParser.UnzContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInterchangeTrailer(EdiParser.InterchangeTrailerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

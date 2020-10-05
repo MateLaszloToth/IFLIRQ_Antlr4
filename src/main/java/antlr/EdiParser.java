@@ -1,11 +1,16 @@
-package antlr;// Generated from Edi.g4 by ANTLR 4.8
+// Generated from Edi.g4 by ANTLR 4.8
+package antlr;
 import org.antlr.v4.runtime.Parser;
 import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.TokenStream;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.misc.*;
 import org.antlr.v4.runtime.tree.*;
+import java.util.List;
+import java.util.Iterator;
+import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class EdiParser extends Parser {
@@ -18,26 +23,28 @@ public class EdiParser extends Parser {
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, WORD=8, INTEGER=9, 
 		ID=10, WS=11, SEPARATOR_SKIP=12;
 	public static final int
-		RULE_edi = 0, RULE_ediObject = 1, RULE_unb = 2, RULE_syntax = 3, RULE_id = 4, 
-		RULE_sender = 5, RULE_recipient = 6, RULE_preparation = 7, RULE_controlReference = 8, 
-		RULE_priority = 9, RULE_versionNumber = 10, RULE_date = 11, RULE_time = 12, 
-		RULE_code = 13, RULE_unh = 14, RULE_messageReference = 15, RULE_messageType = 16, 
-		RULE_name = 17, RULE_releaseNumber = 18, RULE_controllingAgency = 19, 
-		RULE_org = 20, RULE_deliverySystemParty = 21, RULE_agent = 22, RULE_locationDetails = 23, 
-		RULE_countryCode = 24, RULE_currencyCode = 25, RULE_languageCode = 26, 
-		RULE_accessAuthorization = 27, RULE_fdq = 28, RULE_airline = 29, RULE_flight = 30, 
-		RULE_departure = 31, RULE_stx = 32, RULE_grabTheLockFlag = 33, RULE_statusIndicator = 34, 
-		RULE_value = 35, RULE_unt = 36, RULE_messageControl = 37, RULE_unz = 38, 
+		RULE_edi = 0, RULE_ediObject = 1, RULE_interchangeHeader = 2, RULE_syntax = 3, 
+		RULE_id = 4, RULE_sender = 5, RULE_recipient = 6, RULE_preparation = 7, 
+		RULE_controlReference = 8, RULE_priority = 9, RULE_versionNumber = 10, 
+		RULE_date = 11, RULE_time = 12, RULE_code = 13, RULE_messageHeader = 14, 
+		RULE_messageReference = 15, RULE_messageType = 16, RULE_name = 17, RULE_releaseNumber = 18, 
+		RULE_controllingAgency = 19, RULE_requestOriginator = 20, RULE_deliverySystemParty = 21, 
+		RULE_agent = 22, RULE_locationDetails = 23, RULE_countryCode = 24, RULE_currencyCode = 25, 
+		RULE_languageCode = 26, RULE_accessAuthorization = 27, RULE_flightDetails = 28, 
+		RULE_airline = 29, RULE_flight = 30, RULE_departure = 31, RULE_segmentStatus = 32, 
+		RULE_grabTheLockFlag = 33, RULE_statusIndicator = 34, RULE_value = 35, 
+		RULE_messageTrailer = 36, RULE_messageControl = 37, RULE_interchangeTrailer = 38, 
 		RULE_interchangeControl = 39;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"edi", "ediObject", "unb", "syntax", "id", "sender", "recipient", "preparation", 
-			"controlReference", "priority", "versionNumber", "date", "time", "code", 
-			"unh", "messageReference", "messageType", "name", "releaseNumber", "controllingAgency", 
-			"org", "deliverySystemParty", "agent", "locationDetails", "countryCode", 
-			"currencyCode", "languageCode", "accessAuthorization", "fdq", "airline", 
-			"flight", "departure", "stx", "grabTheLockFlag", "statusIndicator", "value", 
-			"unt", "messageControl", "unz", "interchangeControl"
+			"edi", "ediObject", "interchangeHeader", "syntax", "id", "sender", "recipient", 
+			"preparation", "controlReference", "priority", "versionNumber", "date", 
+			"time", "code", "messageHeader", "messageReference", "messageType", "name", 
+			"releaseNumber", "controllingAgency", "requestOriginator", "deliverySystemParty", 
+			"agent", "locationDetails", "countryCode", "currencyCode", "languageCode", 
+			"accessAuthorization", "flightDetails", "airline", "flight", "departure", 
+			"segmentStatus", "grabTheLockFlag", "statusIndicator", "value", "messageTrailer", 
+			"messageControl", "interchangeTrailer", "interchangeControl"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -121,7 +128,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final EdiContext edi() throws org.antlr.v4.runtime.RecognitionException {
+	public final EdiContext edi() throws RecognitionException {
 		EdiContext _localctx = new EdiContext(_ctx, getState());
 		enterRule(_localctx, 0, RULE_edi);
 		try {
@@ -133,7 +140,7 @@ public class EdiParser extends Parser {
 			match(EOF);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -145,26 +152,26 @@ public class EdiParser extends Parser {
 	}
 
 	public static class EdiObjectContext extends ParserRuleContext {
-		public UnbContext unb() {
-			return getRuleContext(UnbContext.class,0);
+		public InterchangeHeaderContext interchangeHeader() {
+			return getRuleContext(InterchangeHeaderContext.class,0);
 		}
-		public UnhContext unh() {
-			return getRuleContext(UnhContext.class,0);
+		public MessageHeaderContext messageHeader() {
+			return getRuleContext(MessageHeaderContext.class,0);
 		}
-		public OrgContext org() {
-			return getRuleContext(OrgContext.class,0);
+		public RequestOriginatorContext requestOriginator() {
+			return getRuleContext(RequestOriginatorContext.class,0);
 		}
-		public FdqContext fdq() {
-			return getRuleContext(FdqContext.class,0);
+		public FlightDetailsContext flightDetails() {
+			return getRuleContext(FlightDetailsContext.class,0);
 		}
-		public StxContext stx() {
-			return getRuleContext(StxContext.class,0);
+		public SegmentStatusContext segmentStatus() {
+			return getRuleContext(SegmentStatusContext.class,0);
 		}
-		public UntContext unt() {
-			return getRuleContext(UntContext.class,0);
+		public MessageTrailerContext messageTrailer() {
+			return getRuleContext(MessageTrailerContext.class,0);
 		}
-		public UnzContext unz() {
-			return getRuleContext(UnzContext.class,0);
+		public InterchangeTrailerContext interchangeTrailer() {
+			return getRuleContext(InterchangeTrailerContext.class,0);
 		}
 		public EdiObjectContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -177,29 +184,29 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final EdiObjectContext ediObject() throws org.antlr.v4.runtime.RecognitionException {
+	public final EdiObjectContext ediObject() throws RecognitionException {
 		EdiObjectContext _localctx = new EdiObjectContext(_ctx, getState());
 		enterRule(_localctx, 2, RULE_ediObject);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(83);
-			unb();
+			interchangeHeader();
 			setState(84);
-			unh();
+			messageHeader();
 			setState(85);
-			org();
+			requestOriginator();
 			setState(86);
-			fdq();
+			flightDetails();
 			setState(87);
-			stx();
+			segmentStatus();
 			setState(88);
-			unt();
+			messageTrailer();
 			setState(89);
-			unz();
+			interchangeTrailer();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -210,7 +217,7 @@ public class EdiParser extends Parser {
 		return _localctx;
 	}
 
-	public static class UnbContext extends ParserRuleContext {
+	public static class InterchangeHeaderContext extends ParserRuleContext {
 		public SyntaxContext syntax() {
 			return getRuleContext(SyntaxContext.class,0);
 		}
@@ -229,20 +236,20 @@ public class EdiParser extends Parser {
 		public PriorityContext priority() {
 			return getRuleContext(PriorityContext.class,0);
 		}
-		public UnbContext(ParserRuleContext parent, int invokingState) {
+		public InterchangeHeaderContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_unb; }
+		@Override public int getRuleIndex() { return RULE_interchangeHeader; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EdiVisitor ) return ((EdiVisitor<? extends T>)visitor).visitUnb(this);
+			if ( visitor instanceof EdiVisitor ) return ((EdiVisitor<? extends T>)visitor).visitInterchangeHeader(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final UnbContext unb() throws org.antlr.v4.runtime.RecognitionException {
-		UnbContext _localctx = new UnbContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_unb);
+	public final InterchangeHeaderContext interchangeHeader() throws RecognitionException {
+		InterchangeHeaderContext _localctx = new InterchangeHeaderContext(_ctx, getState());
+		enterRule(_localctx, 4, RULE_interchangeHeader);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -262,7 +269,7 @@ public class EdiParser extends Parser {
 			priority();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -291,7 +298,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final SyntaxContext syntax() throws org.antlr.v4.runtime.RecognitionException {
+	public final SyntaxContext syntax() throws RecognitionException {
 		SyntaxContext _localctx = new SyntaxContext(_ctx, getState());
 		enterRule(_localctx, 6, RULE_syntax);
 		try {
@@ -303,7 +310,7 @@ public class EdiParser extends Parser {
 			versionNumber();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -327,7 +334,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final IdContext id() throws org.antlr.v4.runtime.RecognitionException {
+	public final IdContext id() throws RecognitionException {
 		IdContext _localctx = new IdContext(_ctx, getState());
 		enterRule(_localctx, 8, RULE_id);
 		try {
@@ -337,7 +344,7 @@ public class EdiParser extends Parser {
 			match(ID);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -363,7 +370,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final SenderContext sender() throws org.antlr.v4.runtime.RecognitionException {
+	public final SenderContext sender() throws RecognitionException {
 		SenderContext _localctx = new SenderContext(_ctx, getState());
 		enterRule(_localctx, 10, RULE_sender);
 		try {
@@ -373,7 +380,7 @@ public class EdiParser extends Parser {
 			id();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -399,7 +406,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final RecipientContext recipient() throws org.antlr.v4.runtime.RecognitionException {
+	public final RecipientContext recipient() throws RecognitionException {
 		RecipientContext _localctx = new RecipientContext(_ctx, getState());
 		enterRule(_localctx, 12, RULE_recipient);
 		try {
@@ -409,7 +416,7 @@ public class EdiParser extends Parser {
 			id();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -438,7 +445,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final PreparationContext preparation() throws org.antlr.v4.runtime.RecognitionException {
+	public final PreparationContext preparation() throws RecognitionException {
 		PreparationContext _localctx = new PreparationContext(_ctx, getState());
 		enterRule(_localctx, 14, RULE_preparation);
 		try {
@@ -450,7 +457,7 @@ public class EdiParser extends Parser {
 			time();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -476,7 +483,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final ControlReferenceContext controlReference() throws org.antlr.v4.runtime.RecognitionException {
+	public final ControlReferenceContext controlReference() throws RecognitionException {
 		ControlReferenceContext _localctx = new ControlReferenceContext(_ctx, getState());
 		enterRule(_localctx, 16, RULE_controlReference);
 		try {
@@ -486,7 +493,7 @@ public class EdiParser extends Parser {
 			id();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -512,7 +519,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final PriorityContext priority() throws org.antlr.v4.runtime.RecognitionException {
+	public final PriorityContext priority() throws RecognitionException {
 		PriorityContext _localctx = new PriorityContext(_ctx, getState());
 		enterRule(_localctx, 18, RULE_priority);
 		try {
@@ -522,7 +529,7 @@ public class EdiParser extends Parser {
 			code();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -546,7 +553,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final VersionNumberContext versionNumber() throws org.antlr.v4.runtime.RecognitionException {
+	public final VersionNumberContext versionNumber() throws RecognitionException {
 		VersionNumberContext _localctx = new VersionNumberContext(_ctx, getState());
 		enterRule(_localctx, 20, RULE_versionNumber);
 		try {
@@ -556,7 +563,7 @@ public class EdiParser extends Parser {
 			match(INTEGER);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -580,7 +587,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final DateContext date() throws org.antlr.v4.runtime.RecognitionException {
+	public final DateContext date() throws RecognitionException {
 		DateContext _localctx = new DateContext(_ctx, getState());
 		enterRule(_localctx, 22, RULE_date);
 		try {
@@ -590,7 +597,7 @@ public class EdiParser extends Parser {
 			match(INTEGER);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -614,7 +621,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final TimeContext time() throws org.antlr.v4.runtime.RecognitionException {
+	public final TimeContext time() throws RecognitionException {
 		TimeContext _localctx = new TimeContext(_ctx, getState());
 		enterRule(_localctx, 24, RULE_time);
 		try {
@@ -624,7 +631,7 @@ public class EdiParser extends Parser {
 			match(INTEGER);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -648,7 +655,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final CodeContext code() throws org.antlr.v4.runtime.RecognitionException {
+	public final CodeContext code() throws RecognitionException {
 		CodeContext _localctx = new CodeContext(_ctx, getState());
 		enterRule(_localctx, 26, RULE_code);
 		try {
@@ -658,7 +665,7 @@ public class EdiParser extends Parser {
 			match(ID);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -669,27 +676,27 @@ public class EdiParser extends Parser {
 		return _localctx;
 	}
 
-	public static class UnhContext extends ParserRuleContext {
+	public static class MessageHeaderContext extends ParserRuleContext {
 		public MessageReferenceContext messageReference() {
 			return getRuleContext(MessageReferenceContext.class,0);
 		}
 		public MessageTypeContext messageType() {
 			return getRuleContext(MessageTypeContext.class,0);
 		}
-		public UnhContext(ParserRuleContext parent, int invokingState) {
+		public MessageHeaderContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_unh; }
+		@Override public int getRuleIndex() { return RULE_messageHeader; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EdiVisitor ) return ((EdiVisitor<? extends T>)visitor).visitUnh(this);
+			if ( visitor instanceof EdiVisitor ) return ((EdiVisitor<? extends T>)visitor).visitMessageHeader(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final UnhContext unh() throws org.antlr.v4.runtime.RecognitionException {
-		UnhContext _localctx = new UnhContext(_ctx, getState());
-		enterRule(_localctx, 28, RULE_unh);
+	public final MessageHeaderContext messageHeader() throws RecognitionException {
+		MessageHeaderContext _localctx = new MessageHeaderContext(_ctx, getState());
+		enterRule(_localctx, 28, RULE_messageHeader);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -701,7 +708,7 @@ public class EdiParser extends Parser {
 			messageType();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -725,7 +732,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final MessageReferenceContext messageReference() throws org.antlr.v4.runtime.RecognitionException {
+	public final MessageReferenceContext messageReference() throws RecognitionException {
 		MessageReferenceContext _localctx = new MessageReferenceContext(_ctx, getState());
 		enterRule(_localctx, 30, RULE_messageReference);
 		try {
@@ -735,7 +742,7 @@ public class EdiParser extends Parser {
 			match(INTEGER);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -770,7 +777,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final MessageTypeContext messageType() throws org.antlr.v4.runtime.RecognitionException {
+	public final MessageTypeContext messageType() throws RecognitionException {
 		MessageTypeContext _localctx = new MessageTypeContext(_ctx, getState());
 		enterRule(_localctx, 32, RULE_messageType);
 		try {
@@ -786,7 +793,7 @@ public class EdiParser extends Parser {
 			controllingAgency();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -810,7 +817,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final NameContext name() throws org.antlr.v4.runtime.RecognitionException {
+	public final NameContext name() throws RecognitionException {
 		NameContext _localctx = new NameContext(_ctx, getState());
 		enterRule(_localctx, 34, RULE_name);
 		try {
@@ -820,7 +827,7 @@ public class EdiParser extends Parser {
 			match(WORD);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -844,7 +851,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final ReleaseNumberContext releaseNumber() throws org.antlr.v4.runtime.RecognitionException {
+	public final ReleaseNumberContext releaseNumber() throws RecognitionException {
 		ReleaseNumberContext _localctx = new ReleaseNumberContext(_ctx, getState());
 		enterRule(_localctx, 36, RULE_releaseNumber);
 		try {
@@ -854,7 +861,7 @@ public class EdiParser extends Parser {
 			match(INTEGER);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -880,7 +887,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final ControllingAgencyContext controllingAgency() throws org.antlr.v4.runtime.RecognitionException {
+	public final ControllingAgencyContext controllingAgency() throws RecognitionException {
 		ControllingAgencyContext _localctx = new ControllingAgencyContext(_ctx, getState());
 		enterRule(_localctx, 38, RULE_controllingAgency);
 		try {
@@ -890,7 +897,7 @@ public class EdiParser extends Parser {
 			id();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -901,7 +908,7 @@ public class EdiParser extends Parser {
 		return _localctx;
 	}
 
-	public static class OrgContext extends ParserRuleContext {
+	public static class RequestOriginatorContext extends ParserRuleContext {
 		public DeliverySystemPartyContext deliverySystemParty() {
 			return getRuleContext(DeliverySystemPartyContext.class,0);
 		}
@@ -914,20 +921,20 @@ public class EdiParser extends Parser {
 		public AccessAuthorizationContext accessAuthorization() {
 			return getRuleContext(AccessAuthorizationContext.class,0);
 		}
-		public OrgContext(ParserRuleContext parent, int invokingState) {
+		public RequestOriginatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_org; }
+		@Override public int getRuleIndex() { return RULE_requestOriginator; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EdiVisitor ) return ((EdiVisitor<? extends T>)visitor).visitOrg(this);
+			if ( visitor instanceof EdiVisitor ) return ((EdiVisitor<? extends T>)visitor).visitRequestOriginator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final OrgContext org() throws org.antlr.v4.runtime.RecognitionException {
-		OrgContext _localctx = new OrgContext(_ctx, getState());
-		enterRule(_localctx, 40, RULE_org);
+	public final RequestOriginatorContext requestOriginator() throws RecognitionException {
+		RequestOriginatorContext _localctx = new RequestOriginatorContext(_ctx, getState());
+		enterRule(_localctx, 40, RULE_requestOriginator);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -943,7 +950,7 @@ public class EdiParser extends Parser {
 			accessAuthorization();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -969,7 +976,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final DeliverySystemPartyContext deliverySystemParty() throws org.antlr.v4.runtime.RecognitionException {
+	public final DeliverySystemPartyContext deliverySystemParty() throws RecognitionException {
 		DeliverySystemPartyContext _localctx = new DeliverySystemPartyContext(_ctx, getState());
 		enterRule(_localctx, 42, RULE_deliverySystemParty);
 		try {
@@ -979,7 +986,7 @@ public class EdiParser extends Parser {
 			code();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1005,7 +1012,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final AgentContext agent() throws org.antlr.v4.runtime.RecognitionException {
+	public final AgentContext agent() throws RecognitionException {
 		AgentContext _localctx = new AgentContext(_ctx, getState());
 		enterRule(_localctx, 44, RULE_agent);
 		try {
@@ -1015,7 +1022,7 @@ public class EdiParser extends Parser {
 			id();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1047,7 +1054,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final LocationDetailsContext locationDetails() throws org.antlr.v4.runtime.RecognitionException {
+	public final LocationDetailsContext locationDetails() throws RecognitionException {
 		LocationDetailsContext _localctx = new LocationDetailsContext(_ctx, getState());
 		enterRule(_localctx, 46, RULE_locationDetails);
 		try {
@@ -1061,7 +1068,7 @@ public class EdiParser extends Parser {
 			languageCode();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1085,7 +1092,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final CountryCodeContext countryCode() throws org.antlr.v4.runtime.RecognitionException {
+	public final CountryCodeContext countryCode() throws RecognitionException {
 		CountryCodeContext _localctx = new CountryCodeContext(_ctx, getState());
 		enterRule(_localctx, 48, RULE_countryCode);
 		try {
@@ -1095,7 +1102,7 @@ public class EdiParser extends Parser {
 			match(WORD);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1119,7 +1126,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final CurrencyCodeContext currencyCode() throws org.antlr.v4.runtime.RecognitionException {
+	public final CurrencyCodeContext currencyCode() throws RecognitionException {
 		CurrencyCodeContext _localctx = new CurrencyCodeContext(_ctx, getState());
 		enterRule(_localctx, 50, RULE_currencyCode);
 		try {
@@ -1129,7 +1136,7 @@ public class EdiParser extends Parser {
 			match(WORD);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1153,7 +1160,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final LanguageCodeContext languageCode() throws org.antlr.v4.runtime.RecognitionException {
+	public final LanguageCodeContext languageCode() throws RecognitionException {
 		LanguageCodeContext _localctx = new LanguageCodeContext(_ctx, getState());
 		enterRule(_localctx, 52, RULE_languageCode);
 		try {
@@ -1163,7 +1170,7 @@ public class EdiParser extends Parser {
 			match(WORD);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1189,7 +1196,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final AccessAuthorizationContext accessAuthorization() throws org.antlr.v4.runtime.RecognitionException {
+	public final AccessAuthorizationContext accessAuthorization() throws RecognitionException {
 		AccessAuthorizationContext _localctx = new AccessAuthorizationContext(_ctx, getState());
 		enterRule(_localctx, 54, RULE_accessAuthorization);
 		try {
@@ -1199,7 +1206,7 @@ public class EdiParser extends Parser {
 			code();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1210,7 +1217,7 @@ public class EdiParser extends Parser {
 		return _localctx;
 	}
 
-	public static class FdqContext extends ParserRuleContext {
+	public static class FlightDetailsContext extends ParserRuleContext {
 		public AirlineContext airline() {
 			return getRuleContext(AirlineContext.class,0);
 		}
@@ -1220,20 +1227,20 @@ public class EdiParser extends Parser {
 		public DepartureContext departure() {
 			return getRuleContext(DepartureContext.class,0);
 		}
-		public FdqContext(ParserRuleContext parent, int invokingState) {
+		public FlightDetailsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_fdq; }
+		@Override public int getRuleIndex() { return RULE_flightDetails; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EdiVisitor ) return ((EdiVisitor<? extends T>)visitor).visitFdq(this);
+			if ( visitor instanceof EdiVisitor ) return ((EdiVisitor<? extends T>)visitor).visitFlightDetails(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final FdqContext fdq() throws org.antlr.v4.runtime.RecognitionException {
-		FdqContext _localctx = new FdqContext(_ctx, getState());
-		enterRule(_localctx, 56, RULE_fdq);
+	public final FlightDetailsContext flightDetails() throws RecognitionException {
+		FlightDetailsContext _localctx = new FlightDetailsContext(_ctx, getState());
+		enterRule(_localctx, 56, RULE_flightDetails);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1247,7 +1254,7 @@ public class EdiParser extends Parser {
 			departure();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1273,7 +1280,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final AirlineContext airline() throws org.antlr.v4.runtime.RecognitionException {
+	public final AirlineContext airline() throws RecognitionException {
 		AirlineContext _localctx = new AirlineContext(_ctx, getState());
 		enterRule(_localctx, 58, RULE_airline);
 		try {
@@ -1283,7 +1290,7 @@ public class EdiParser extends Parser {
 			code();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1307,7 +1314,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final FlightContext flight() throws org.antlr.v4.runtime.RecognitionException {
+	public final FlightContext flight() throws RecognitionException {
 		FlightContext _localctx = new FlightContext(_ctx, getState());
 		enterRule(_localctx, 60, RULE_flight);
 		try {
@@ -1317,7 +1324,7 @@ public class EdiParser extends Parser {
 			match(INTEGER);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1341,7 +1348,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final DepartureContext departure() throws org.antlr.v4.runtime.RecognitionException {
+	public final DepartureContext departure() throws RecognitionException {
 		DepartureContext _localctx = new DepartureContext(_ctx, getState());
 		enterRule(_localctx, 62, RULE_departure);
 		try {
@@ -1351,7 +1358,7 @@ public class EdiParser extends Parser {
 			match(INTEGER);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1362,24 +1369,24 @@ public class EdiParser extends Parser {
 		return _localctx;
 	}
 
-	public static class StxContext extends ParserRuleContext {
+	public static class SegmentStatusContext extends ParserRuleContext {
 		public GrabTheLockFlagContext grabTheLockFlag() {
 			return getRuleContext(GrabTheLockFlagContext.class,0);
 		}
-		public StxContext(ParserRuleContext parent, int invokingState) {
+		public SegmentStatusContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_stx; }
+		@Override public int getRuleIndex() { return RULE_segmentStatus; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EdiVisitor ) return ((EdiVisitor<? extends T>)visitor).visitStx(this);
+			if ( visitor instanceof EdiVisitor ) return ((EdiVisitor<? extends T>)visitor).visitSegmentStatus(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final StxContext stx() throws org.antlr.v4.runtime.RecognitionException {
-		StxContext _localctx = new StxContext(_ctx, getState());
-		enterRule(_localctx, 64, RULE_stx);
+	public final SegmentStatusContext segmentStatus() throws RecognitionException {
+		SegmentStatusContext _localctx = new SegmentStatusContext(_ctx, getState());
+		enterRule(_localctx, 64, RULE_segmentStatus);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1389,7 +1396,7 @@ public class EdiParser extends Parser {
 			grabTheLockFlag();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1418,7 +1425,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final GrabTheLockFlagContext grabTheLockFlag() throws org.antlr.v4.runtime.RecognitionException {
+	public final GrabTheLockFlagContext grabTheLockFlag() throws RecognitionException {
 		GrabTheLockFlagContext _localctx = new GrabTheLockFlagContext(_ctx, getState());
 		enterRule(_localctx, 66, RULE_grabTheLockFlag);
 		try {
@@ -1430,7 +1437,7 @@ public class EdiParser extends Parser {
 			value();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1454,7 +1461,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final StatusIndicatorContext statusIndicator() throws org.antlr.v4.runtime.RecognitionException {
+	public final StatusIndicatorContext statusIndicator() throws RecognitionException {
 		StatusIndicatorContext _localctx = new StatusIndicatorContext(_ctx, getState());
 		enterRule(_localctx, 68, RULE_statusIndicator);
 		try {
@@ -1464,7 +1471,7 @@ public class EdiParser extends Parser {
 			match(WORD);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1488,7 +1495,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final ValueContext value() throws org.antlr.v4.runtime.RecognitionException {
+	public final ValueContext value() throws RecognitionException {
 		ValueContext _localctx = new ValueContext(_ctx, getState());
 		enterRule(_localctx, 70, RULE_value);
 		try {
@@ -1498,7 +1505,7 @@ public class EdiParser extends Parser {
 			match(INTEGER);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1509,27 +1516,27 @@ public class EdiParser extends Parser {
 		return _localctx;
 	}
 
-	public static class UntContext extends ParserRuleContext {
+	public static class MessageTrailerContext extends ParserRuleContext {
 		public MessageControlContext messageControl() {
 			return getRuleContext(MessageControlContext.class,0);
 		}
 		public MessageReferenceContext messageReference() {
 			return getRuleContext(MessageReferenceContext.class,0);
 		}
-		public UntContext(ParserRuleContext parent, int invokingState) {
+		public MessageTrailerContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_unt; }
+		@Override public int getRuleIndex() { return RULE_messageTrailer; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EdiVisitor ) return ((EdiVisitor<? extends T>)visitor).visitUnt(this);
+			if ( visitor instanceof EdiVisitor ) return ((EdiVisitor<? extends T>)visitor).visitMessageTrailer(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final UntContext unt() throws org.antlr.v4.runtime.RecognitionException {
-		UntContext _localctx = new UntContext(_ctx, getState());
-		enterRule(_localctx, 72, RULE_unt);
+	public final MessageTrailerContext messageTrailer() throws RecognitionException {
+		MessageTrailerContext _localctx = new MessageTrailerContext(_ctx, getState());
+		enterRule(_localctx, 72, RULE_messageTrailer);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1541,7 +1548,7 @@ public class EdiParser extends Parser {
 			messageReference();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1565,7 +1572,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final MessageControlContext messageControl() throws org.antlr.v4.runtime.RecognitionException {
+	public final MessageControlContext messageControl() throws RecognitionException {
 		MessageControlContext _localctx = new MessageControlContext(_ctx, getState());
 		enterRule(_localctx, 74, RULE_messageControl);
 		try {
@@ -1575,7 +1582,7 @@ public class EdiParser extends Parser {
 			match(INTEGER);
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1586,27 +1593,27 @@ public class EdiParser extends Parser {
 		return _localctx;
 	}
 
-	public static class UnzContext extends ParserRuleContext {
+	public static class InterchangeTrailerContext extends ParserRuleContext {
 		public InterchangeControlContext interchangeControl() {
 			return getRuleContext(InterchangeControlContext.class,0);
 		}
 		public ControlReferenceContext controlReference() {
 			return getRuleContext(ControlReferenceContext.class,0);
 		}
-		public UnzContext(ParserRuleContext parent, int invokingState) {
+		public InterchangeTrailerContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_unz; }
+		@Override public int getRuleIndex() { return RULE_interchangeTrailer; }
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EdiVisitor ) return ((EdiVisitor<? extends T>)visitor).visitUnz(this);
+			if ( visitor instanceof EdiVisitor ) return ((EdiVisitor<? extends T>)visitor).visitInterchangeTrailer(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final UnzContext unz() throws org.antlr.v4.runtime.RecognitionException {
-		UnzContext _localctx = new UnzContext(_ctx, getState());
-		enterRule(_localctx, 76, RULE_unz);
+	public final InterchangeTrailerContext interchangeTrailer() throws RecognitionException {
+		InterchangeTrailerContext _localctx = new InterchangeTrailerContext(_ctx, getState());
+		enterRule(_localctx, 76, RULE_interchangeTrailer);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1618,7 +1625,7 @@ public class EdiParser extends Parser {
 			controlReference();
 			}
 		}
-		catch (org.antlr.v4.runtime.RecognitionException re) {
+		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
 			_errHandler.recover(this, re);
@@ -1642,7 +1649,7 @@ public class EdiParser extends Parser {
 		}
 	}
 
-	public final InterchangeControlContext interchangeControl() throws org.antlr.v4.runtime.RecognitionException {
+	public final InterchangeControlContext interchangeControl() throws RecognitionException {
 		InterchangeControlContext _localctx = new InterchangeControlContext(_ctx, getState());
 		enterRule(_localctx, 78, RULE_interchangeControl);
 		try {
