@@ -9,6 +9,10 @@
 
 grammar Edi;
 
+
+@header {
+   package antlr;
+}
 //options{buildAST=true;}
 
 edi

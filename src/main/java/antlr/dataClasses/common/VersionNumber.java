@@ -1,7 +1,7 @@
-package antlr.dataClasses.interchangeHeader.syntax.versionNumber;
+package antlr.dataClasses.common;
 
 public class VersionNumber {
-    public String content = null;
+    public String content;
 
     public VersionNumber(String content) {
         this.content = content;

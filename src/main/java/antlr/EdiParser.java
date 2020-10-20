@@ -38,7 +38,7 @@ public class EdiParser extends Parser {
 	private static String[] makeRuleNames() {
 		return new String[] {
 			"edi", "ediObject", "interchangeHeader", "syntax", "id", "sender", "recipient", 
-			"preparation", "controlReference", "priority", "versionNumber", "date", 
+			"preparation", "controlReference", "priority", "common", "date",
 			"time", "code", "messageHeader", "messageReference", "messageType", "name", 
 			"releaseNumber", "controllingAgency", "requestOriginator", "deliverySystemParty", 
 			"agent", "locationDetails", "countryCode", "currencyCode", "languageCode", 

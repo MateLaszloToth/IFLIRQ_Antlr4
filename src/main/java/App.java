@@ -5,7 +5,8 @@
 
 import antlr.EdiLexer;
 import antlr.EdiParser;
-import antlr.EdiParser.EdiContext;
+import antlr.dataClasses.EdiObject;
+import antlr.visitors.MyEdiBaseVisitor;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -25,7 +26,9 @@ public class App {
         CommonTokenStream tokenStream = new CommonTokenStream(lexer);
         EdiParser parser = new EdiParser(tokenStream);
 
-        EdiContext parseTree = parser.edi();
+        EdiParser.EdiContext ediContext = parser.edi();
+        MyEdiBaseVisitor visitor = new MyEdiBaseVisitor();
+        EdiObject ediObject = (EdiObject) visitor.visit(ediContext);
 
         System.out.println("Done");
     }

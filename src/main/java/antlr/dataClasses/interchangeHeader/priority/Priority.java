@@ -1,10 +1,12 @@
 package antlr.dataClasses.interchangeHeader.priority;
 
+import antlr.dataClasses.common.Code;
+
 public class Priority {
 
-    public String code;
+    public Code code;
 
-    public Priority(String code) {
+    public Priority(Code code) {
         this.code = code;
     }
 }

@@ -17,8 +17,7 @@ public class EdiBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements Ed
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEdi(EdiParser.EdiContext ctx) {
-		return visitChildren(ctx); }
+	@Override public T visitEdi(EdiParser.EdiContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

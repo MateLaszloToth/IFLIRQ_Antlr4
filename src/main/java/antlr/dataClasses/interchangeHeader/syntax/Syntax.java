@@ -1,7 +1,7 @@
 package antlr.dataClasses.interchangeHeader.syntax;
 
 import antlr.dataClasses.interchangeHeader.controlReference.id.Id;
-import antlr.dataClasses.interchangeHeader.syntax.versionNumber.VersionNumber;
+import antlr.dataClasses.common.VersionNumber;
 
 public class Syntax {
 
